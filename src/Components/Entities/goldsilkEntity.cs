@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
 using AsitLib;
 using static Stolon.StolonGame;
+using SeedAquiringTime;
 
 using Math = System.Math;
 using System.Diagnostics;
@@ -190,7 +191,11 @@ namespace Stolon
             positionalScore = distanceFromCenter * distanceFromCenter * -1 * distanceFromGround * distanceFromGround;
             Instance.DebugStream.WriteLine("\t\t\t\tmove has a positionalScore of " + positionalScore + ", xDelta: " + distanceFromCenter + ", yDelta: " + distanceFromGround);
 
+            //WE LOADING VERGIL UP IN THIS MADAFACKA
+            //SeedAquirer seedAquirer = new SeedAquirer();
+            //Random random = new Random(seedAquirer.GetSeedFromVergil());
             Random random = new Random();
+
             randomScore = random.Next(1, 40);
             Instance.DebugStream.WriteLine("\t\t\t\tmove has a randomScore of " + randomScore);
 
